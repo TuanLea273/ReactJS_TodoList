@@ -10,10 +10,7 @@ import NotMatch from './NotMatch';
 
 
 const TodoContainer = () => {
-
   const [todos, setTodos] = useState(getInitialTodos())
-
-
   useEffect(() => {
     // storing todos items
     const temp = JSON.stringify(todos)
