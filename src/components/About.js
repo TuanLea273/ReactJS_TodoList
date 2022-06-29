@@ -4,6 +4,7 @@ import SinglePage from './SinglePage'
 
 const About = () => {
   const { url, path } = useRouteMatch()
+
   return (
     <div className="about__content">
       <ul className="about__list">

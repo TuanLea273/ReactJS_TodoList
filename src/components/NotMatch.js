@@ -2,7 +2,11 @@ import React from 'react'
 
 const NotMatch = () => {
     return (
-        <div>NotMatch</div>
+        <div>
+            <h3>
+                No match for this page
+            </h3>
+        </div>
     )
 }
 

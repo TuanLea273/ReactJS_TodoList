@@ -4,9 +4,10 @@ import Header from "./Header";
 import InputTodo from "./InputTodo"
 import TodosList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
-import Navbar from './Navbar';
+
 import About from './About';
 import NotMatch from './NotMatch';
+import Navbar from './Navbar';
 
 
 const TodoContainer = () => {
