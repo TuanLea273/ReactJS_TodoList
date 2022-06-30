@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <Router basename={process.env.PUBLIC_URL}>
       <TodoContainer />
-    </Router>  
+    </Router>
   </React.StrictMode>
 );
 

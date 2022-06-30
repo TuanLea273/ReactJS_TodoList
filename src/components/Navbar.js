@@ -49,9 +49,9 @@ const Navbar = () => {
                         <li key={link.id}>
                             <NavLink
                                 to={link.path}
-                                activeClassName="active-link"
+                                activestyle="active-link"
                                 onClick={() => closeMenu()}
-                                exact
+                                end
                             >
                                 {link.text}
                             </NavLink>
