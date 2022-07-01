@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react"
-import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import InputTodo from "./InputTodo"
 import TodosList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
 
-import About from './About';
-import NotMatch from './NotMatch';
-import Navbar from './Navbar';
+
 
 
 const TodoContainer = () => {
@@ -69,9 +66,7 @@ const TodoContainer = () => {
 
   return (
     <>
-      <Navbar />
-      <Routes >
-        <Route element={<div className="container">
+      <div className="container">
           <div className="inner">
             <Header />
             <InputTodo addTodoProps={addTodoItem} />
@@ -82,10 +77,7 @@ const TodoContainer = () => {
               setUpdate={setUpdate}
             />
           </div>
-        </div>} />
-        <Route element={<About />} />
-        <Route element={<NotMatch />} />
-      </Routes>
+        </div>
     </>
   );
 }

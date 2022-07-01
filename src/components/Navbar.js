@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
@@ -17,7 +17,7 @@ const Navbar = () => {
         },
         {
             id: 2,
-            path: "/about",
+            path: "about",
             text: "About",
         }
     ]
@@ -47,14 +47,13 @@ const Navbar = () => {
                 {links.map((link) => {
                     return (
                         <li key={link.id}>
-                            <NavLink
+                            <Link
+                                activeclassname="active-link"
                                 to={link.path}
-                                activestyle="active-link"
                                 onClick={() => closeMenu()}
-                                end
                             >
                                 {link.text}
-                            </NavLink>
+                            </Link>
                         </li>
                     )
                 })}
