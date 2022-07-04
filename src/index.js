@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 //component
 import TodoContainer from "./components/TodoContainer"
 import Navbar from './components/Navbar';
@@ -14,11 +14,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router basename={process.env.PUBLIC_URL}>
     <Routes>
-      <Navbar />
-      <Route path="/" element={<TodoContainer />} />
-      <Route path="about" element={<About />} />
-      <Route path="*" element={<NotMatch />} />
+      <Route element={<><Navbar /><div><Outlet /></div></>}>
+        <Route path="/" element={<TodoContainer />} />
+        <Route path="about" element={<About />}>
+
+        </Route>
+        <Route path="about/:slug" element={<About />} />
+        <Route path="*" element={<NotMatch />} />
+      </Route>
     </Routes>
-  </Router>
+  </Router >
 );
 
