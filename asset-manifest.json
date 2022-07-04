@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TuanLea273/ReactJS_TodoList/static/css/main.f64a1b5f.css",
+    "main.js": "/TuanLea273/ReactJS_TodoList/static/js/main.54519459.js",
+    "index.html": "/TuanLea273/ReactJS_TodoList/index.html",
+    "main.f64a1b5f.css.map": "/TuanLea273/ReactJS_TodoList/static/css/main.f64a1b5f.css.map",
+    "main.54519459.js.map": "/TuanLea273/ReactJS_TodoList/static/js/main.54519459.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f64a1b5f.css",
+    "static/js/main.54519459.js"
+  ]
+}
