@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link, Route } from "react-router-dom"
+import { Link, Route, Routes, useLocation, useParams } from "react-router-dom"
 import SinglePage from './SinglePage'
 
 const About = () => {
+  const { pathname } = useLocation();
+  let { id } = useParams();
+  console.log(`${pathname}/${id}`);
   return (
     <div className="about__content">
       <ul className="about__list">
@@ -13,8 +16,10 @@ const About = () => {
           <Link to="about-author">About Author</Link>
         </li>
       </ul>
-      <Route element={<SinglePage />} />
-    </div>
+      <Routes>
+        <Route path={`${pathname}/:slug`} element={<SinglePage />} />
+      </Routes>
+    </div >
   )
 }
 export default About

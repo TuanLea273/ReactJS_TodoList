@@ -12,14 +12,12 @@ import "./App.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
-    <Navbar />
+  <Router basename={process.env.PUBLIC_URL}>
     <Routes>
-      <Route index path="/" element={<TodoContainer />} />
-      <Route path="about" element={<About />} >
-     
-      </Route>
-      <Route element={<NotMatch />} />
+      <Navbar />
+      <Route path="/" element={<TodoContainer />} />
+      <Route path="about" element={<About />} />
+      <Route path="*" element={<NotMatch />} />
     </Routes>
   </Router>
 );

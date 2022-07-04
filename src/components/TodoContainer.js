@@ -4,9 +4,6 @@ import InputTodo from "./InputTodo"
 import TodosList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
 
-
-
-
 const TodoContainer = () => {
   const [todos, setTodos] = useState(getInitialTodos())
   useEffect(() => {

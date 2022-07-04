@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
@@ -47,13 +47,15 @@ const Navbar = () => {
                 {links.map((link) => {
                     return (
                         <li key={link.id}>
-                            <Link
-                                activeclassname="active-link"
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? "active-link" : undefined
+                                }
                                 to={link.path}
                                 onClick={() => closeMenu()}
                             >
                                 {link.text}
-                            </Link>
+                            </NavLink>
                         </li>
                     )
                 })}
