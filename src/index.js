@@ -16,10 +16,7 @@ root.render(
     <Routes>
       <Route element={<><Navbar /><div><Outlet /></div></>}>
         <Route path="/" element={<TodoContainer />} />
-        <Route path="about" element={<About />}>
-
-        </Route>
-        <Route path="about/:slug" element={<About />} />
+        <Route path="about/*" element={<About />}/>
         <Route path="*" element={<NotMatch />} />
       </Route>
     </Routes>
